@@ -1,4 +1,4 @@
-server: 
+server:
   port: 8080
 eureka:
   client:
@@ -17,14 +17,14 @@ spring:
           enabled: true
       routes:
         - id: usuario-servicio
-          uri: lb://usuario-service
+          uri: lb://usuario-servicio
           predicates:
             - Path=/usuario/**    
         - id: carro-servicio
-          uri: lb://carro-service
+          uri: lb://carro-servicio
           predicates:
             - Path=/carro/**    
         - id: moto-servicio
-          uri: lb://moto-service
+          uri: lb://moto-servicio
           predicates:
             - Path=/moto/**    
