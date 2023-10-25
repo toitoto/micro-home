@@ -31,12 +31,12 @@ public class UsuarioService {
 	private UsuarioRepository usuarioRepository;
 	
 	public List<Object> getCarros(int usuarioId){
-		List<Object> carritos=restTemplate.getForObject("http://localhost:8082/carro/usuario/"+usuarioId, List.class);
+		List<Object> carritos=restTemplate.getForObject("http://carro-servicio/carro/usuario/"+usuarioId, List.class);
 		return carritos;
 	}
 	
 	public List<Object> getMotos(int usuarioId){
-		List<Object> motos=restTemplate.getForObject("http://localhost:8083/moto/usuario/"+usuarioId, List.class);
+		List<Object> motos=restTemplate.getForObject("http://moto-servicio/moto/usuario/"+usuarioId, List.class);
 		return motos;
 	}
 	
